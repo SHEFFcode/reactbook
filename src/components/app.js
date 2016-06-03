@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import BookList from '../containers/BookList';
-import { connect } from 'react-redux';
+import BookDetail from '../containers/BookDetail';
+
 
 class App extends Component {
   render() {
     return (
       <div>
         <BookList />
+        <BookDetail />
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return ({
-    books: state.books
-  });
-}
-
-export default connect(mapStateToProps)(BookList);
+export default App;
